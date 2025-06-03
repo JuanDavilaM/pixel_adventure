@@ -1,16 +1,28 @@
 # pixel_adventure
 
-A new Flutter project.
+**Pixel Adventure** es el primer videojuego que he desarrollado utilizando Flutter y el motor Flame. Es un juego de plataformas 2D que incluye múltiples niveles, personajes animados y desafíos interactivos.
 
-## Getting Started
+### ✨ Características destacadas:
+- Movimiento fluido del personaje con animaciones (`idle`, `running`) y cambio de dirección.
+- Niveles diseñados con plataformas, obstáculos y desafíos.
+- Integración de assets en pixel art.
+- Juego completamente funcional en simuladores de **Xcode (iOS)**.
+- Arquitectura modular con separación de lógica, niveles y entidades.
 
-This project is a starting point for a Flutter application.
+### 🛠 Herramientas y tecnologías utilizadas:
+- **Flutter** + **Flame** (motor de juego)
+- **Dart** como lenguaje principal
+- **Tilt** para pruebas e implementación en entorno local
+- **Figma** para diseñar la interfaz y planificar los niveles visualmente
+- **Xcode Simulator** para probar en dispositivos iOS
+- **Git** para control de versiones
 
-A few resources to get you started if this is your first Flutter project:
+### 🚀 Próximas mejoras:
+- Implementación de sonido y música de fondo
+- Sistema de puntuación y vidas
+- Guardado de progreso entre niveles
+- Más personajes y enemigos
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Este proyecto ha sido una introducción práctica al desarrollo de videojuegos con Flutter, combinando diseño visual, lógica de juego y pruebas en entorno móvil. ¡Gracias por revisar este proyecto! 🎮
