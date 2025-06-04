@@ -37,7 +37,7 @@ final double stepTime = 0.05;
 
 
 final double _gravity = 9.8;
-final double _jumpForce = 460;
+final double _jumpForce = 260;
 final double _terminateVelocity = 300;
 
 double horizontalMovement = 0;
@@ -56,6 +56,8 @@ CustomHitbox hitbox = CustomHitbox(
   height: 28
 );
 
+double fixedDeltaTime = 1 /60;
+double accumulatedTime = 0;
 
 @override
   void onCollision(Set<Vector2> intersectionPoints, PositionComponent other) {
@@ -85,14 +87,20 @@ CustomHitbox hitbox = CustomHitbox(
 @override
   void update(double dt) {
 
-    if(!isHit && !reachedCheckpoint){
+    accumulatedTime += dt;
+    while (accumulatedTime >= fixedDeltaTime) {
+      if(!isHit && !reachedCheckpoint){
     _updatePlayerState();
-    _updatePlayerMovement(dt);
+    _updatePlayerMovement(fixedDeltaTime);
     _checkHorizontalCollisions();
-    _applyGravity(dt);
+    _applyGravity(fixedDeltaTime);
     _checkVerticalCollisions();
     
     }
+    accumulatedTime -= fixedDeltaTime;
+    }
+
+    
     super.update(dt);
   }
   
